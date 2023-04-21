@@ -9,6 +9,7 @@ import UIKit
 
 final class DescriptionViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var movieBannerView: UIImageView!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
@@ -16,13 +17,16 @@ final class DescriptionViewController: UIViewController {
     @IBOutlet weak var descriptionTextLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     
+    // MARK: Vars
     var viewModel = DescriptionViewModel()
     
+    // MARK: View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
     }
     
+    // MARK: SetupUI Methods
     private func setupUI() {
         setupNavController()
         
@@ -35,29 +39,37 @@ final class DescriptionViewController: UIViewController {
         }
         
         movieBannerView.clipsToBounds = true
-        movieBannerView.layer.cornerRadius = 8
+        movieBannerView.layer.cornerRadius = Constants.bannerCornerRadius
         
         playButton.setTitle("", for: .normal)
     }
     
     private func setupNavController() {
         //Setting the BackButton Appearance
-        let leftItem = UIImage(named: "BackButton")
+        let leftItem = UIImage(named: ImagesNames.backButton)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: #selector(UINavigationController.popViewController(animated:)))
         self.navigationItem.leftBarButtonItem?.image = leftItem
         
         //Setting the Title Appearance
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.init(named: "AccentColor") ?? .orange]
-        let logo = UIImage(named: "Logo")
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor:UIColor.init(named: MyColors.accentColor) ?? .orange
+        ]
+        let logo = UIImage(named: ImagesNames.logo)
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
     }
     
+    // MARK: IBActions
     @IBAction func playButtonPressed(_ sender: Any) {
         if let movieTitle = viewModel.movieData?.title {
-            showAlert(title: "Here you will find", message: movieTitle)
+            showAlert(title: Constants.alertTitleText, message: movieTitle)
         }
     }
     
-    
+}
+
+// MARK: Constants
+fileprivate enum Constants {
+    static let bannerCornerRadius: CGFloat = 8
+    static let alertTitleText = "Here you will find"
 }

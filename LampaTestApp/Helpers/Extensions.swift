@@ -22,9 +22,14 @@ extension UITableView {
 extension UIViewController {
     func showAlert(title: String, message: String) {
         let errorAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        errorAlertController.addAction(.init(title: "OK", style: .cancel, handler: nil))
+        errorAlertController.addAction(.init(title: Constants.alertOkButtonText, style: .cancel, handler: nil))
         DispatchQueue.main.async {
             self.present(errorAlertController, animated: true, completion: nil)
         }
     }
+}
+
+// MARK: Constants
+fileprivate enum Constants {
+    static let alertOkButtonText = "OK"
 }

@@ -75,6 +75,11 @@ enum TheMovieDbAPI: API {
     }
 }
 
+// MARK: - URL for image fetching
+enum UrlConstants {
+    static let urlForImages = "https://image.tmdb.org/t/p/w500/"
+}
+
 
 // MARK: - BuildURL Func
 private func buildURL(endpoint: API) -> URLComponents {
@@ -134,9 +139,5 @@ final class NetworkManager: NetworkManagerProtocol {
             }
         }
         task?.resume()
-    }
-    
-    deinit {
-        print("Deallocation \(self)")
     }
 }

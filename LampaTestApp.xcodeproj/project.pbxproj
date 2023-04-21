@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0906BC0829F20D95003B8C81 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906BC0729F20D95003B8C81 /* Constants.swift */; };
 		0906BC0A29F21274003B8C81 /* UIGradientImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906BC0929F21274003B8C81 /* UIGradientImageView.swift */; };
 		0906BC0C29F214D2003B8C81 /* DescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0906BC0B29F214D2003B8C81 /* DescriptionViewModel.swift */; };
 		093D5C0729EE932000E7325F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D5C0629EE932000E7325F /* AppDelegate.swift */; };
@@ -26,12 +25,12 @@
 		093D5C3229F023A500E7325F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D5C3129F023A500E7325F /* NetworkManager.swift */; };
 		093D5C3429F0274B00E7325F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D5C3329F0274B00E7325F /* NetworkError.swift */; };
 		093D5C3729F0281E00E7325F /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093D5C3629F0281E00E7325F /* MovieModel.swift */; };
+		095D7DC429F2EC5100B53FD1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D7DC329F2EC5100B53FD1 /* Constants.swift */; };
 		09E57C3229F1F6F600100702 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E57C3129F1F6F600100702 /* DescriptionViewController.swift */; };
 		09E57C3429F1F75300100702 /* DescriptionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09E57C3329F1F75300100702 /* DescriptionViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0906BC0729F20D95003B8C81 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0906BC0929F21274003B8C81 /* UIGradientImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGradientImageView.swift; sourceTree = "<group>"; };
 		0906BC0B29F214D2003B8C81 /* DescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewModel.swift; sourceTree = "<group>"; };
 		093D5C0329EE932000E7325F /* LampaTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LampaTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +51,7 @@
 		093D5C3129F023A500E7325F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		093D5C3329F0274B00E7325F /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		093D5C3629F0281E00E7325F /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		095D7DC329F2EC5100B53FD1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		09E57C3129F1F6F600100702 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		09E57C3329F1F75300100702 /* DescriptionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DescriptionViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,7 +136,7 @@
 		093D5C3529F0275200E7325F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0906BC0729F20D95003B8C81 /* Constants.swift */,
+				095D7DC329F2EC5100B53FD1 /* Constants.swift */,
 				093D5C2E29EF5DF300E7325F /* Extensions.swift */,
 				093D5C3329F0274B00E7325F /* NetworkError.swift */,
 				0906BC0929F21274003B8C81 /* UIGradientImageView.swift */,
@@ -224,12 +224,12 @@
 				093D5C3229F023A500E7325F /* NetworkManager.swift in Sources */,
 				0906BC0C29F214D2003B8C81 /* DescriptionViewModel.swift in Sources */,
 				093D5C2929EF4A9500E7325F /* SceneDelegate.swift in Sources */,
+				095D7DC429F2EC5100B53FD1 /* Constants.swift in Sources */,
 				093D5C2B29EF543F00E7325F /* MoviesTableViewCell.swift in Sources */,
 				093D5C2129EEC2C200E7325F /* HomeScreenViewModel.swift in Sources */,
 				093D5C1B29EEB12F00E7325F /* AppCoordinator.swift in Sources */,
 				093D5C2729EF310000E7325F /* MainTabBarController.swift in Sources */,
 				093D5C0B29EE932000E7325F /* HomeScreenViewController.swift in Sources */,
-				0906BC0829F20D95003B8C81 /* Constants.swift in Sources */,
 				093D5C3429F0274B00E7325F /* NetworkError.swift in Sources */,
 				093D5C0729EE932000E7325F /* AppDelegate.swift in Sources */,
 				0906BC0A29F21274003B8C81 /* UIGradientImageView.swift in Sources */,

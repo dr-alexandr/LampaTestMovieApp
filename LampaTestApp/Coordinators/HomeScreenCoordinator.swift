@@ -9,24 +9,31 @@ import UIKit
 
 final class HomeScreenCoordinator: CoordinatorProtocol {
     
+    // Vars
     var rootViewController = UIViewController()
     
+    // Stubs
     func start() {
         
-        let homeStoryboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
-        guard let homeController = homeStoryboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController
+        // Creating First Controller for TabBar
+        let homeStoryboard = UIStoryboard(name: ControllersNames.homeScreenViewController, bundle: nil)
+        guard let homeController = homeStoryboard.instantiateViewController(withIdentifier: ControllersNames.homeScreenViewController)
+                as? HomeScreenViewController
         else {return}
         
         homeController.useCase = .popular
         homeController.viewModel.coordinator = self
 
-        let favouritesStoryboard = UIStoryboard(name: "HomeScreenViewController", bundle: nil)
-        guard let favouritesController = favouritesStoryboard.instantiateViewController(withIdentifier: "HomeScreenViewController") as? HomeScreenViewController
+        // Creating Second Controller for TabBar
+        let favouritesStoryboard = UIStoryboard(name: ControllersNames.homeScreenViewController, bundle: nil)
+        guard let favouritesController = favouritesStoryboard.instantiateViewController(withIdentifier: ControllersNames.homeScreenViewController)
+                as? HomeScreenViewController
         else {return}
         
         favouritesController.useCase = .topRated
         favouritesController.viewModel.coordinator = self
         
+        // Setting TabBar with created Controllers
         let mainTabBarController = MainTabBarController(homeVC: homeController, favouritesVC: favouritesController)
         
         mainTabBarController.homeVC.viewModel.view = mainTabBarController.homeVC

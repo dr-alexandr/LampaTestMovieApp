@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: - PopularMoviesModel
+// MARK: - CollectionMoviesModel
 struct CollectionMoviesModel: Codable {
     let page: Int?
     let results: [MovieResult]?
@@ -44,7 +44,7 @@ struct MovieResult: Codable {
     }
 }
 
-// MARK: - MovieModel
+// MARK: - MovieModel Usable
 struct MovieModel {
     let adult: Bool?
     let backdropPath: String?

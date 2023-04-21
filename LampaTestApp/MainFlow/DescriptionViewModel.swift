@@ -9,12 +9,14 @@ import UIKit
 
 final class DescriptionViewModel {
     
+    // MARK: Vars
     var movieData: MovieModel?
     weak var view: DescriptionViewController?
     
+    // MARK: Load Banner Image Async
     func loadBanner(movie: MovieModel) {
         DispatchQueue.global(qos: .userInteractive).async {
-            guard let bannerUrl = URL(string: Constants.urlForImages + (movie.backdropPath ?? "")),
+            guard let bannerUrl = URL(string: UrlConstants.urlForImages + (movie.backdropPath ?? "")),
                   let data = try? Data(contentsOf: bannerUrl),
                   let image = UIImage(data: data)
             else {return}
