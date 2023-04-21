@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DescriptionViewController-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DescriptionViewController" title="DescriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DescriptionViewController" customModule="LampaTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MoviePlaceholderLandscape" translatesAutoresizingMaskIntoConstraints="NO" id="0mM-Jn-r7V" customClass="UIGradientImageView" customModule="LampaTestApp" customModuleProvider="target">
+                                <rect key="frame" x="16" y="75" width="361" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="QK7-Wc-hTE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsQ-vD-Bmu" userLabel="MovieTitle">
+                                <rect key="frame" x="27.999999999999993" y="223.66666666666666" width="82.333333333333314" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FilledStar" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-bt-672">
+                                <rect key="frame" x="349" y="228" width="14" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="3zu-Mk-ynZ"/>
+                                    <constraint firstAttribute="height" constant="14" id="6Fn-yq-ex3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqI-BW-hAD">
+                                <rect key="frame" x="324" y="228" width="20" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="tg0-CN-giT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qzc-Ma-TG3" userLabel="PlayButton">
+                                <rect key="frame" x="152.66666666666666" y="126" width="88" height="78"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="PlayButton"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sfX-rm-Y7l"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A46-HH-sSx">
+                                <rect key="frame" x="16" y="279" width="92.333333333333329" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjH-xG-PrA">
+                                <rect key="frame" x="16" y="314.33333333333331" width="361" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jts-hf-Sy2">
+                                <rect key="frame" x="16.000000000000004" y="347.33333333333331" width="57.333333333333343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03.05.2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noY-5I-trQ" userLabel="ReleaseDate">
+                                <rect key="frame" x="78.333333333333343" y="347.33333333333331" width="79.333333333333343" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0mM-Jn-r7V" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6Yz-uN-04a"/>
+                            <constraint firstItem="Qzc-Ma-TG3" firstAttribute="centerY" secondItem="0mM-Jn-r7V" secondAttribute="centerY" id="8aB-Bj-YUM"/>
+                            <constraint firstItem="0mM-Jn-r7V" firstAttribute="bottom" secondItem="ZqI-BW-hAD" secondAttribute="bottom" constant="12" id="Dyj-4F-Cqg"/>
+                            <constraint firstItem="DjH-xG-PrA" firstAttribute="top" secondItem="A46-HH-sSx" secondAttribute="bottom" constant="16" id="L7z-o4-ngO"/>
+                            <constraint firstItem="Qzc-Ma-TG3" firstAttribute="centerX" secondItem="0mM-Jn-r7V" secondAttribute="centerX" id="Lr2-7a-dam"/>
+                            <constraint firstItem="DjH-xG-PrA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="QMB-eQ-Xkb"/>
+                            <constraint firstItem="AAf-bt-672" firstAttribute="leading" secondItem="ZqI-BW-hAD" secondAttribute="trailing" constant="5" id="TOa-Kb-9NV"/>
+                            <constraint firstItem="noY-5I-trQ" firstAttribute="top" secondItem="DjH-xG-PrA" secondAttribute="bottom" constant="16" id="WPf-JA-9FT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DjH-xG-PrA" secondAttribute="trailing" constant="16" id="WpF-CE-kuz"/>
+                            <constraint firstItem="NsQ-vD-Bmu" firstAttribute="leading" secondItem="0mM-Jn-r7V" secondAttribute="leading" constant="12" id="Yes-Xc-0Wt"/>
+                            <constraint firstItem="jts-hf-Sy2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Yew-t8-qSs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0mM-Jn-r7V" secondAttribute="trailing" constant="16" id="Ze4-XB-BT2"/>
+                            <constraint firstItem="noY-5I-trQ" firstAttribute="leading" secondItem="jts-hf-Sy2" secondAttribute="trailing" constant="5" id="awn-lY-FKf"/>
+                            <constraint firstItem="0mM-Jn-r7V" firstAttribute="bottom" secondItem="NsQ-vD-Bmu" secondAttribute="bottom" constant="12" id="edf-SK-SoJ"/>
+                            <constraint firstItem="ZqI-BW-hAD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NsQ-vD-Bmu" secondAttribute="trailing" constant="75" id="elv-Qc-22G"/>
+                            <constraint firstItem="A46-HH-sSx" firstAttribute="top" secondItem="0mM-Jn-r7V" secondAttribute="bottom" constant="24" id="fcR-I9-6ba"/>
+                            <constraint firstItem="0mM-Jn-r7V" firstAttribute="bottom" secondItem="AAf-bt-672" secondAttribute="bottom" constant="13" id="iBT-Nf-fwz"/>
+                            <constraint firstItem="0mM-Jn-r7V" firstAttribute="trailing" secondItem="AAf-bt-672" secondAttribute="trailing" constant="14" id="iX3-4D-d0o"/>
+                            <constraint firstItem="A46-HH-sSx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="nEF-Hg-JYY"/>
+                            <constraint firstItem="jts-hf-Sy2" firstAttribute="top" secondItem="DjH-xG-PrA" secondAttribute="bottom" constant="16" id="rxG-Yz-6cN"/>
+                            <constraint firstItem="0mM-Jn-r7V" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="xNZ-7G-VgO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextLabel" destination="DjH-xG-PrA" id="CPT-gO-meg"/>
+                        <outlet property="movieBannerView" destination="0mM-Jn-r7V" id="ALq-Lg-2ag"/>
+                        <outlet property="movieTitleLabel" destination="NsQ-vD-Bmu" id="qYS-SS-G6k"/>
+                        <outlet property="playButton" destination="Qzc-Ma-TG3" id="RTo-hN-Nkv"/>
+                        <outlet property="rateLabel" destination="ZqI-BW-hAD" id="h5w-rS-mLX"/>
+                        <outlet property="releaseDateLabel" destination="noY-5I-trQ" id="lBy-Xb-bb5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FilledStar" width="16" height="14"/>
+        <image name="MoviePlaceholderLandscape" width="800" height="450"/>
+        <image name="PlayButton" width="64" height="64"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.6119999885559082" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
